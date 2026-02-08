@@ -33,5 +33,24 @@
   </div>
 
 </div>
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "YAHI SAME KEY",
+    authDomain: "SAME",
+    projectId: "SAME",
+    storageBucket: "SAME",
+    messagingSenderId: "SAME",
+    appId: "SAME"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="admin.js"></script>
 </body>
 </html>
