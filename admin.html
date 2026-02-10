@@ -5,13 +5,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
+
+<script>
   const pass = prompt("Enter Admin Password:");
   if (pass !== "shiv135") {
-    alert("Wrong password!");
+    alert("Wrong password");
     window.location.href = "index.html";
   }
 </script>
+
 <header>
   <div class="logo">Admin Panel</div>
 </header>
@@ -20,19 +22,18 @@
 
   <div class="admin-box">
     <h3>Add Product</h3>
-    <input placeholder="Product Name">
-    <input placeholder="Price">
-    <input placeholder="Image URL">
-    <input placeholder="Sizes (S,M,L)">
-    <button class="btn">Add Product</button>
-  </div>
 
-  <div class="admin-box">
-    <h3>Orders</h3>
-    <p>No orders yet</p>
+    <input id="name" placeholder="Product Name">
+    <input id="price" placeholder="Price">
+    <input id="image" placeholder="Image URL">
+    <input id="desc" placeholder="Product Description">
+
+    <button class="btn" onclick="addProduct()">Add Product</button>
   </div>
 
 </div>
+
+<!-- FIREBASE SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
@@ -49,6 +50,8 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 </script>
+
 <script src="admin.js"></script>
+
 </body>
 </html>
